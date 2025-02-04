@@ -14,7 +14,7 @@
     }
 }
 
-@media(max-width: 497px){
+@media(max-width: 496px){
     .lista-personagens {
         /*diminuir a largura carta*/
         width: 250px;
