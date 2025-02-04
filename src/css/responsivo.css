@@ -1,0 +1,63 @@
+/*pra quando chegar em tal tamanho a pagina, acontece esse comando (media = quando a padina for pra um celular por exemplo)*/
+@media(max-width: 768px){
+    body {
+        /*faz o fundo acompanhar no mrio*/
+        background-position: center;
+        /*tirar os botoes grudados no canto*/
+        /*o primeiro e a altura `0` e o segundo a largura `15px`*/
+        padding: 0 15px;
+    }
+
+    .slider{
+        /*aproximar a seta da carta*/
+        gap: 10px;
+    }
+}
+
+@media(max-width: 497px){
+    .lista-personagens {
+        /*diminuir a largura carta*/
+        width: 250px;
+    }
+    .imagem-carta {
+        width: 100%;
+    }
+
+    /*todos os botoes*/
+    .slider{
+        /*colocar os botoes no meio*/
+        position: relative;
+    }
+
+    .btn-seta{
+        position: absolute;
+        /*colocar para baixo*/
+        bottom: -13%;
+    }
+
+    #btn-avancar{
+        /*botao vai 20% pra direita*/
+        right: 20%;
+    }
+
+    #btn-voltar{
+        /*botao pra esquerda*/
+        left: 20%;
+    }
+}
+
+@media (max-widht: 375px) {
+    body{
+        /*joga pra cima*/
+        justify-content: start;
+        /*desgrudar de cima*/
+        padding-top: 10px;
+        /*afasta dos lados*/
+        gap: 10px;
+    }
+
+    .cabecalho{
+        /*diminuir texto*/
+        font-size: 12px;
+    }
+}

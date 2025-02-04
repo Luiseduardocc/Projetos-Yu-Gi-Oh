@@ -1,0 +1,258 @@
+body{
+    font-family: 'Yugioh';
+    /*url() para colocar alguma imagem*/
+    background-image: url(../imagens/fundo-site.jpg);
+    /*para ter apenas uma imagem escolhida*/
+    background-repeat: no-repeat;
+    /*cover = cobrir toda a pag com a imagem*/
+    background-size: cover;
+    /*centralizar toda a carta*/
+    display: flex;
+    justify-content: center;
+    /*um debaixo do outro*/
+    flex-direction: column;
+    /*diminuir a altura da carta para caber*/
+    min-height: 100vh;
+    /*separar elementos*/
+    gap: 30px;
+}
+
+/*estilizacao apenas de uma classe*/
+.cabecalho{
+    /*seleciona o filho da classe*/
+    display: flex;
+    /*posiciona o filho da classe*/
+    justify-content: center;
+}
+
+/*mudar a cor da letra*/
+.cabecalho .titulo{
+    color: floralwhite;
+}
+
+.cartas{
+    /*esconde o objeto selecionado*/
+    opacity: 1;
+    display: flex;
+    /*pra deixar um embaixo do outro*/
+    flex-direction: column;/*column = coluna*/
+    /*borda*/
+    padding: 12px; 
+    gap: 5px;
+    /*empilhar os cartoes um em cima do outro*/
+    position: absolute;
+}
+
+.cartas.selecionada{
+    opacity: 1;
+    /*e o que tem prioridade(o primeiro)*/
+    z-index: 1;
+}
+
+.lista-personagens{
+    /*largura*/
+    width: 300px;
+    /*altura*/
+    height: 500px;
+    /*borda arrendondada*/
+    border-radius: 10px;
+    /*pra alinhar os cartoes atras um do outro alinhado*/
+    position: relative;
+}
+
+.slider{
+    /*os filhos um do lado do outro*/
+    display: flex;
+    /*colocar no centro*/
+    justify-content: center;
+    /*botao criar um corpo(posiciona vertcal)*/
+    align-items: center;
+    /*espacamento entre os filhos dentro flex*/
+    gap: 130px;
+
+}
+
+.cartas .nome-personagem{
+    /*tamanho da fonte*/
+    font-size: 13px;
+    /*espacamento interno*/
+    padding: 5px;
+    /*transformar tudo em letra maiuscula*/
+    text-transform: uppercase;
+    /*fundo com gradiente(nuance)*/
+    background: radial-gradient(circle, #f3e2cb, #e4cfa5, #c4a57a);
+    /*borda com cor*/
+    border: 2px solid #a67c52;
+    border-radius: 4px;
+}
+
+.cartas .estrela{
+    /*largura*/
+    width: 20px;
+    /*altura*/
+    height: 20px;
+    /*imagem*/
+    background-image: url(../imagens/nivel-carta.png);
+    /*cointain = combrir apenas uma parte*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*pra aparecer o span(inline-block = um do lado da outra)*/
+    display: inline-block;
+    /*colocar pra direita*/
+
+
+}
+
+.cartas .nivel-carta{
+    /*seleciona o filho*/
+    display: flex;
+    /*posicionar na horizontal(flex-end = posicionar no final)*/
+    justify-content: flex-end;
+    /*margem da direita*/
+    margin-right: 10px;
+    /*espacamento entre as estrelas*/
+    gap: 5px;
+}
+
+.cartas .imagem-carta{
+    /*largura da imagem*/
+    max-width: 260px;
+    /*posicionar no centro*/
+    align-self: center;
+}
+
+.cartas .informacoes{
+    /*arredondar as bordas*/
+    border-radius: 5px;
+    /*largura maxima*/
+    max-width: 300px;
+    color: black;
+    background: radial-gradient(circle, #f3e2cb, #e4cfa5, #c4a57a);
+    /*borda colorida*/
+    border: 2px solid #a67c52;
+    /*alinhar o texto*/
+    text-align: left;
+    /*espacamento de linha*/
+    line-height: 1,5; 
+    padding: 5px;
+}
+
+.cartas .informacoes .informacoes-ataque{
+    display: flex;
+    /*flex-end = colocar no final, parte direita)*/
+    justify-content: flex-end;
+    /*espacamento entre as palavras*/
+    gap: 5px;
+    /*afastamento de todos os lados*/
+    padding: 10px;
+}
+
+.cartas .informacoes .informacoes-ataque span{
+    /*tamnho da fonte*/
+    font-size: 13px;
+}
+
+.cartas .informacoes .descricao{
+    /*bottom = borda em baixo*/
+    border-bottom: 1px solid black;
+    /*espacamento entre as linhas*/
+    padding: 10px;
+    /*maximo de altura(saiu do quadrado)*/
+    max-height: 95px;
+    /*criar a  rolagem*/
+    overflow-y: scroll;
+    font-size: 13px;
+}
+
+
+/*fundo das cartas*/
+.fundo-1{
+    background-image: url(../imagens/fundo-1.jpg);
+}
+.fundo-2{
+    background-image: url(../imagens/fundo-2.jpg);
+}
+.fundo-3{
+    background-image: url(../imagens/fundo-3.jpg);
+}
+.fundo-4{
+    background-image: url(../imagens/fundo-4.jpg);
+}
+.fundo-5{
+    background-image: url(../imagens/fundo-5.jpg);
+}
+.fundo-6{
+    background-image: url(../imagens/fundo-6.jpg);
+}
+.fundo-7{
+    background-image: url(../imagens/fundo-7.jpg);
+}
+
+.btn-seta{
+    background-color:white;
+    /*largura*/
+    width: 70px;
+    /*altura*/
+    height: 70px;
+    display: flex;
+    /*se esta para cima e para baixo(coloca no centro)*/
+    align-items: center;
+    /*se esta para direira e para esquerda(coloca no centro)*/
+    justify-content: center;
+    /*borda redonda*/
+    border-radius: 50px;
+    /*tirar a cor da borda*/
+    border: 0;
+    /*trocar o botao mouse para a maozinha*/
+    cursor: pointer;
+    /*transicao suave quando o botao troca de cor*/
+    transition: background-color 0.2s ease-in-out;
+    /*sombra no botao (css scan - sites que tem sombra)*/
+    box-shadow: rgba(100, 100, 111, o.2) 0px 7px 29px 0px;
+}
+
+/*quando e id, as classes precisam estar juntas*/
+.btn-seta.btn-voltar{
+    /*girar o botao*/
+    transform: rotateY(180deg);
+}
+
+/*troca a cor do botao quando passa por cima dele*/
+.btn-seta:hover{
+    background-color: #8351fe;
+}
+
+/*estilizar a rolagem da descricao do personagem*/
+body::-webkit-scrollbar-track{
+    background-color: #c08057;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c08057;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c08057;
+}
+
+.carta-virada.mostrar-fundo-carta{
+    background-color: #8351fe;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../imagens/fundo-carta.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+
+
+
+
+
